@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class frequency {
+    
+    //6) Remove all spaces from a string
+    public static void RemoveSpaces(String s){
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch != ' ') {
+                System.out.print(ch);
+            }
+        }
+    }
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        RemoveSpaces(s);
+        
+    }
+}

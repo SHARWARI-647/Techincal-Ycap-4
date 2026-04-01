@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class frequency {
+    // 7) Find the length of a string (without strlen)
+   public static void stringLength(String s){
+        int len=0;
+        for(char ch:s.toCharArray() ){
+          len++;
+      }
+       System.out.println("Length="+len);
+   }
+
+   //8) Copy a string (without using strcpy)
+   public static void stringCopy(String s){
+       String str="";
+       for(char ch:s.toCharArray() ){
+           str+=ch;
+       }
+       System.out.println("Copy string="+str);
+   }
+ 
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        stringLength(s);
+       
+    }
+}

@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class NonRepeatingChar {
+    //12) Find the first non-repeating character
+    public static void NonRepeatChar(String s){
+        String str = s.toLowerCase();
+        String res = "";
+
+        for(int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
+            boolean found = false;
+
+            for(int j = 0; j < i; j++){
+                if(str.charAt(j) != ch){
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found){
+                res += ch;
+            }
+        }
+
+        System.out.println(res);
+    }
+ 
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        NonRepeatChar(s);
+          
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class frequency {
+
+    //16) Find the longest word in a sentence
+    public static void longestWord(String s) {
+        int max=0;
+
+        String[] str=s.split(" ");
+        for(int i=1;i<str.length;i++){
+            if(str[i].length() > str[max].length()){
+                max=i;
+            }
+        }
+        System.out.println("Longest word="+str[max]);
+
+    }
+   
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+       longestWord(s);
+           
+    }
+}

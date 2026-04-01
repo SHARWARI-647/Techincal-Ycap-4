@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class frequency {
+  
+    //15) Count the occurrences of a substring
+    public static void SubstringOccur(String s,String sub) {
+        s=s.toLowerCase();
+        int cnt=0;
+        for(int i=0;i<=s.length()-sub.length();i++){
+            boolean match=true;
+            for(int j=0;j<sub.length();j++){
+                if (s.charAt(i + j) != sub.charAt(j)) {
+                    match = false;
+                    break;
+                }
+        }
+            if (match) {
+                cnt++;
+            }}
+        System.out.println("Count = "+cnt);
+    }
+
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        SubstringOccur(s,"om");
+    }
+}

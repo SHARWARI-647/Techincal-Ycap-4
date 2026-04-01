@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Panlindrom {
+    public static boolean isPalindrome(String s) {
+
+        String str = "";
+        String rev = "";
+
+        // Remove spaces
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch != ' ') {
+                str += ch;
+            }
+        }
+
+        // Reverse string without spaces
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        return str.equalsIgnoreCase(rev);
+    }
+    
+    }
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        // Advanced check (ignoring spaces)
+        if (isPalindrome(s)) {
+            System.out.println("Palindrome (ignoring spaces)");
+        } else {
+            System.out.println("Not Palindrome (ignoring spaces)");
+        }
+    
+    }
+}

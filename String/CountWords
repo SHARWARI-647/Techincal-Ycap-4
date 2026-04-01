@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class frequency {
+    
+   //10) Count the number of words in a sentence
+   public static void CountWords(String s){
+        int cnt=0;
+       for (int i = 0; i < s.length(); i++) {
+           char ch = s.charAt(i);
+           if (ch == ' ') {
+               cnt++;
+           }
+       }
+       System.out.println("Words="+(cnt+1));
+   }
+ 
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        CountWords(s);
+        
+    }
+}

@@ -1,0 +1,22 @@
+ 
+public class frequency {
+
+//19) Check if a string contains only digits
+public static void checkDigit(String s){
+    for (int i = 0; i < s.length(); i++) {
+        char ch = s.charAt(i);
+        if (!Character.isDigit(ch)) {
+            System.out.print("Not Contains only digits");
+            return;
+        }
+    }
+    System.out.print("Contains only digits");
+}
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        checkDigit(s);
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class frequency {
+    //5) Convert the case of characters
+    public static void CaseConvert(String s){
+        for (int i = 0; i < s.length(); i++) {
+            int ch = s.charAt(i);
+            if (ch >= 65 && ch <= 90) {
+                ch += 32;
+            } else if (ch >= 97 && ch <= 122) {
+                ch -= 32;
+            }
+            System.out.print((char) ch);
+        }
+    }
+
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();
+
+        CaseConvert(s);
+        
+    }
+}
